@@ -1,9 +1,9 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+// scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.product-card button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Produto adicionado ao carrinho!');
         });
     });
 });
